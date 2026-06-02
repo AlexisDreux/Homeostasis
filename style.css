@@ -1,0 +1,36 @@
+.main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.letters {
+  display: flex;
+  justify-content: center;
+  gap: 150px; 
+  margin-top: 20px;
+}
+
+.letters img {
+  width: 250px;
+  height: 120px;
+  object-fit: cover;
+}
+
+
+body {
+  background-color: white	;
+  color: white;
+}
+
+.top-right-img {
+  position: absolute;
+
+  top: 20px;   /* top margin */
+  right: 20px;  /* right margin */
+
+  width: 300px;
+  height: 150px;
+
+  object-fit: cover;
+}

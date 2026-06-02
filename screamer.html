@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fullscreen Image</title>
+
+  <link rel="stylesheet" href="screamer.css">
+</head>
+
+<body>
+
+  <!-- IMAGE -->
+  <img src="images/screamer.jpg"
+       class="fullscreen-img"
+       alt="screamer">
+
+  <!-- SON -->
+  <audio id="screamer-sound">
+    <source src="images/screamer_son.mp4" type="audio/mp4">
+  </audio>
+
+  <!-- SCRIPT -->
+  <script>
+
+    window.onload = function() {
+
+      const sound = document.getElementById("screamer-sound");
+
+      const playPromise = sound.play();
+
+      if (playPromise !== undefined) {
+
+        playPromise.catch(() => {
+
+          document.body.addEventListener("click", () => {
+            sound.play();
+          }, { once: true });
+
+        });
+      }
+    };
+
+  </script>
+
+</body>
+
+</html>

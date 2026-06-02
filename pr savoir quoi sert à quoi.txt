@@ -1,0 +1,54 @@
+pr savoir quoi sert à quoi + guide de comment ajouter et references 
+
+dans le css 
+
+gap: 50px; :: dans la page d'accueilsert à séparer les plus petites images et définir l'espae entre elles 
+margin-top: 20px; sert à savoir l'espace entre les trois images à l'accueil et la grosse image 
+
+
+t1,t2;t3,t4, etc = tableaux = "paintings" 
+w1, wé , etc = "works" 
+	
+
+à mettre pour les pages pour qu'on puisse aller au menu : 
+
+<a href="index.html" class="back-home">← GO HOME??</a>
+
+et mettre ca dans le css : 
+
+.back-home {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  color: white;
+  text-decoration: none;
+
+  border: 1px solid white;
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+.back-home:hover {
+  background-color: white;
+  color: black;
+}
+
+🎲 1. Changer la fréquence du fond  sur la page 3  (probabilité)
+
+Actuellement tu as :
+
+const roll = Math.floor(Math.random() * 6) + 1;
+
+if (roll === 1) {
+
+change la ou 
+
+const roll = Math.floor(Math.random() * X) + 1;     remplace le X par 1 
+
+width = largeur 
+height = longueur
+
+

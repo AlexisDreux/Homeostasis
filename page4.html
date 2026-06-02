@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>KNOWLEDGE</title>
+
+  <link rel="stylesheet" href="page4.css">
+</head>
+
+<body>
+
+  <input type="text"
+         id="codeInput"
+         placeholder="TRYHERETHRYHERETRYHERE">
+
+  <button onclick="checkCode()">Valider</button>
+
+  <p id="message"></p>
+
+  <!-- BOUTON RETOUR ACCUEIL -->
+  <a href="index.html" class="back-home">← GO HOME??</a>
+
+  <script>
+
+    function checkCode() {
+
+      let code = document.getElementById("codeInput").value;
+
+      if (code === "HOME") {
+
+        document.getElementById("message").innerText = "Code correct ✔️";
+
+      }
+
+      else if (code === "WHOAREU") {
+
+        window.location.href = "WHOAREU.html";
+
+      }
+
+      else if (code === "DONTTRUSTME") {
+
+        window.location.href = "screamer.html";
+
+      }
+
+      else {
+
+        document.getElementById("message").innerText = ":((";
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

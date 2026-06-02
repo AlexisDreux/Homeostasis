@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>PAINTINGS</title>
+
+  <link rel="stylesheet" href="page2.css">
+
+  <script>
+    window.addEventListener("load", () => {
+
+      const roll = Math.floor(Math.random() * 6) + 1;
+
+      if (roll === 1) {
+
+        const img = document.getElementById("flash-image");
+
+        if (img) {
+          img.style.display = "block";
+
+          setTimeout(() => {
+            img.style.display = "none";
+          }, 200);
+        }
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <div class="gallery">
+
+    <div class="column">
+
+      <img src="images/t1.jpg" alt="Toile 1" onclick="openLightbox(this.src)">
+      <img src="images/t3.jpg" alt="Toile 3" onclick="openLightbox(this.src)">
+      <img src="images/t10.png" alt="Toile 10" onclick="openLightbox(this.src)">
+
+    </div>
+
+    <div class="column">
+
+      <img src="images/t4.png" alt="Toile 4" onclick="openLightbox(this.src)">
+      <img src="images/t2.jpg" alt="Toile 2" onclick="openLightbox(this.src)">
+      <img src="images/t6.jpg" alt="Toile 6" onclick="openSlider()">
+
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+  </div>
+
+  <!-- SLIDER -->
+  <div id="slider" class="lightbox">
+
+    <span class="close" onclick="closeSlider()">✕</span>
+    <span class="prev" onclick="changeSlide(-1)">❮</span>
+
+    <img id="slider-img">
+
+    <span class="next" onclick="changeSlide(1)">❯</span>
+
+  </div>
+
+  <!-- IMAGE FLASH SECRÈTE -->
+  <img id="flash-image" src="images/p7.png">
+
+  <script>
+
+    function openLightbox(src) {
+      document.getElementById("lightbox").style.display = "flex";
+      document.getElementById("lightbox-img").src = src;
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+
+    const sliderImages = [
+      "images/t7.jpg",
+      "images/t8.jpg",
+      "images/t9.jpg"
+    ];
+
+    let currentSlide = 0;
+
+    function openSlider() {
+      document.getElementById("slider").style.display = "flex";
+      document.getElementById("slider-img").src = sliderImages[currentSlide];
+    }
+
+    function closeSlider() {
+      document.getElementById("slider").style.display = "none";
+    }
+
+    function changeSlide(direction) {
+
+      currentSlide += direction;
+
+      if (currentSlide < 0) {
+        currentSlide = sliderImages.length - 1;
+      }
+
+      if (currentSlide >= sliderImages.length) {
+        currentSlide = 0;
+      }
+
+      document.getElementById("slider-img").src = sliderImages[currentSlide];
+    }
+
+  </script>
+
+  <a href="index.html" class="back-home">← GO HOME??</a>
+
+</body>
+
+</html>
