@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HOMEOSTASIS</title>	
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<video class="main-img" autoplay muted loop playsinline>
+  <source src="images/p1.mp4" type="video/mp4">
+</video>
+
+<div class="letters"> 
+
+  <!-- IMAGE RANDOM (painpleasure) -->
+  <img src="images/painpleasure.png" class="top-right-img">
+
+  <a href="page3.html">
+    <img src="images/p3.jpg" alt="Page 3">
+  </a>
+
+  <a href="page2.html">
+    <img src="images/p2.png" alt="Page 2">
+  </a>
+
+  <a href="page4.html">
+    <img src="images/p4.jpg" alt="Page 4">
+  </a>
+
+</div>
+
+<!-- SCRIPT RANDOM 1/10 -->
+<script>
+
+window.onload = function() {
+
+  let chance = Math.random();
+
+  if (chance < 0.10) {
+    document.querySelector(".top-right-img").style.display = "block";
+  } else {
+    document.querySelector(".top-right-img").style.display = "none";
+  }
+
+};
+
+</script>
+
+</body>
+
+</html>
